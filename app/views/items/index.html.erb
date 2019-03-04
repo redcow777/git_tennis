@@ -1,0 +1,220 @@
+<div id="container">
+  
+  
+  <div class="slider">
+    <ul class="slides">
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/1"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/2"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>Left Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/3"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>Right Aligned Caption</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/4"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="wrapper">
+  <div class="column cat1">
+    <div class="info">
+
+<h3>横浜テニス練習会とは</h3>
+
+毎週末の朝と夜に、横浜市内で活動しています。<br>
+
+<p>練習会ごとに、テニスオフネットやSNSを通じて、<br>
+メンバーを募集しているのが特徴です。</p>
+
+<p>「一人で気軽に参加できる」<br>
+「練習したいときだけ参加する」スタイルとなってます。</p>
+
+
+2017年５月から開始。<br>
+１年間に延べ１５０人以上の方が参加しています。<br>
+      
+      
+    </div>
+  </div>
+  <div class="column cat2">
+    <div class="info">
+
+      <%= image_tag 'test.jpg',  :size =>'700x400'%>
+
+    </div>
+  </div>
+</div>
+  
+
+
+
+ <div class="wrapper">
+  <div class="column cat1">
+    <div class="info">
+
+ <%= image_tag 'test.jpg',  :size =>'700x400'%>
+      
+      
+    </div>
+  </div>
+  
+    <div class="column cat2">
+    <div class="info">
+
+      <h4><i class="Large material-icons">brightness_5</i>朝の練習会</h4>
+<p>午前７時から午前９時、<br>
+保土ケ谷区のテニスガーデンレニックスで開催しています。</p>
+
+<p>基礎練習となります。<br>
+ラリー、ボレー、サーブ。<br>
+１面の定員は５人まで。</p>
+
+<p>クロスラリーなどの対人メニューが中心。<br>
+２時間、常に打ち続けるようなハードなメニューが特徴です。</p>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<div class="wrapper">
+  <div class="column cat1">
+    <div class="info">
+<h4><i class="Large material-icons">brightness_3</i>夜の練習会</h4>
+<p>午後７時間から午後９時、<br>
+富岡西公園、長浜公園、日野中央公演、新杉田公園などで開催しています。</p>
+
+<p>シングルス練習となります。<br>
+２面で４人だけ。</p>
+
+<p>一人３試合（１セット、３０分打ち切り）こなします。<br>
+大会前の調整に参加する人が多いです。</p>
+
+    </div>
+  </div>
+  <div class="column cat2">
+    <div class="info">
+
+      <%= image_tag 'test.jpg',  :size =>'700x400'%>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="wrapper">
+  <div class="column cat1">
+    <div class="info">
+   <%= image_tag 'test.jpg',  :size =>'700x400'%>
+
+    </div>
+  </div>
+  <div class="column cat2">
+    <div class="info">
+<h4><i class="Large material-icons">accessibility</i>対象メンバー</h4>
+
+<ul>
+<li>草大会１回戦〜横浜市民大会３回戦くらい</li>
+<li>部活、社会人サークル、実業団のいずれかの経験者</li>
+<li>競技志向が強い</li>
+<li>シングルスが好き</li>
+<li>テニスだけに集中したい</li>
+</ul>
+
+上記に該当する方、大歓迎です！（※男性限定）
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<h4>直近のスケジュール</h4>
+  <table border="1" cellspacing="0" bordercolor="#000000" align="center" class="striped centered responsive-table">
+      
+        <thead>
+          <tr>
+            <th>日程</th>
+            <th>場所</th>
+            <th>詳細</th>
+          </tr>
+        </thead>
+        <% @items.each do |item| %>
+              <tr>
+                <td><%= item.zikan %></td>
+                <td><%= item.basho %></td>
+                <td><%= link_to item.off, item.tobu %></td>
+              </tr>
+        <% end %>
+  </table>
+
+
+            
+<div class="wrapper">
+  <div class="column cat1">
+    <div class="info">
+<h4><i class="Large material-icons">child_care</i>幹事のプロフィール</h4>
+<p>３３歳の平均的なサラリーマンです。<br>
+３歳の長女と５歳の長男がおり、<br>
+日中はテニスができません（泣）</p>
+
+<p>早朝や夜の時間帯に、<br>
+一緒に練習してくるメンバーを募集しています！<br>
+（2019年は、団体戦にもエントリーしたい！！）</p>
+
+    </div>
+  </div>
+  <div class="column cat2">
+    <div class="info">
+
+      <%= image_tag 'test.jpg',  :size =>'700x400'%>
+
+    </div>
+  </div>
+</div>
+
+
+
+<div class="wrapper">
+  <div class="column cat1">
+    <div class="info">
+<%= image_tag 'test.jpg',  :size =>'700x400'%>
+
+    </div>
+  </div>
+  <div class="column cat2">
+    <div class="info">
+
+      <h4><i class="Large material-icons">directions_run</i>申し込み方法</h4>
+
+    </div>
+  </div>
+</div>
+</div>
